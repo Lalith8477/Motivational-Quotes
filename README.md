@@ -1,16 +1,97 @@
-# React + Vite
+# 🌞 Daily Motivation Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🧩 Problem Context
 
-Currently, two official plugins are available:
+Students need daily motivation. This app fetches random motivational quotes and allows users to like their favorites.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔄 Quote System
+- Fetch random quote using API
+- Load quote on page start (`useEffect`)
+- "New Quote" button to fetch new quote
 
-## Expanding the ESLint configuration
+### ❤️ Like System
+- Like / Unlike quotes
+- Toggle liked state
+- Store liked quotes in array
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📊 Stats
+- Display total number of liked quotes
+
+### ⏳ UI States
+- Show loading text while fetching
+- Disable buttons during API call
+
+---
+
+## 💾 Bonus Features
+
+- Store liked quotes in `localStorage`
+- Persist likes after refresh
+- Show list of all liked quotes
+
+---
+
+## 🛠️ Tech Stack
+
+- React (Functional Components)
+- useState
+- useEffect
+- Fetch API
+- localStorage
+
+---
+
+## 📡 API Used
+
+https://api.quotable.io/random
+
+---
+
+## 📂 State Management
+
+- quote → stores current quote  
+- author → stores quote author  
+- loading → API loading state  
+- likedQuotes → array of liked quotes  
+
+---
+
+## ⚙️ App Flow
+
+### 1. Load App
+- Fetch random quote using `useEffect`
+
+### 2. New Quote Button
+- Fetch new quote from API
+- Disabled while loading
+
+### 3. Like Button
+- Toggle quote in liked list
+- Update liked count
+
+### 4. Persistence (Bonus)
+- Save liked quotes to localStorage
+- Load saved quotes on startup
+
+---
+
+## 🖥️ UI Behavior
+
+- Shows loading state when fetching
+- Buttons disabled during API call
+- Displays quote and author
+- Like button toggles state instantly
+
+---
+
+## 📦 Setup
+
+```bash
+git clone https://github.com/your-username/daily-motivation-dashboard.git
+cd daily-motivation-dashboard
+npm install
+npm start
